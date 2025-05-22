@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* @font-face {
+  font-family: 'Nunito Sans';
+  src: url('./assets/fonts/Nunito_Sans/NunitoSans-Regular.woff2') format('woff2'),
+       url('./assets/fonts/Nunito_Sans/NunitoSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('/fonts/NunitoSans/NunitoSans-Bold.woff2') format('woff2'),
+       url('/fonts/NunitoSans/NunitoSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+} */
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  color: white;
+  font-family:"Nunito Sans", sans-serif;
+}
+[data-aos] {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+
+
+.react-hot-toast-success > svg {
+  color: #fe04b4; 
+}

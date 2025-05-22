@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <title>im</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script>
+    // Save scroll position before the page unloads
+    window.addEventListener('beforeunload', () => {
+      localStorage.setItem('scrollPosition', window.scrollY);
+    });
+
+    // Restore scroll position on page load with smooth scroll effect
+    window.addEventListener('load', () => {
+      const scrollPosition = localStorage.getItem('scrollPosition');
+      if (scrollPosition) {
+        window.scrollTo(0, 0);
+
+        // Smoothly scroll to saved position after a slight delay
+        requestAnimationFrame(() => {
+          window.scrollTo({
+            top: parseInt(scrollPosition, 10),
+            behavior: 'smooth'
+          });
+        });
+      }
+    });
+
+  </script>
+</body>
+
+</html>
